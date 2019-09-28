@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoletimPage implements OnInit {
   boletim;
+  media;
 
   constructor() {
     this.boletim = [
@@ -20,14 +21,20 @@ export class BoletimPage implements OnInit {
       },
       {
         'disciplina': 'IHC',
-        'nota': 3.0
+        'nota': 5.0
       },
       {
         'disciplina': 'EMP',
-        'nota': 0.5
+        'nota': 10
       },
     ];
+    let soma = 0
+    for (let i of this.boletim){
+        soma += i.nota
+    };
+    this.media = soma/this.boletim.length
   }
+
 
   ngOnInit() {
   }

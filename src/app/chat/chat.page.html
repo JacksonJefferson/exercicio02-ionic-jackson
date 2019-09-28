@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Conversas</ion-list-header>
+    <ion-item *ngFor="let registro of conversas">
+      <ion-avatar slot="start">
+        <img src="{{registro.img}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{registro.contato}}</h2>
+        <p>{{registro.assunto}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

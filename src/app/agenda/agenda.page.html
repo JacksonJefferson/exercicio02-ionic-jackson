@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Agenda</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let registro of agenda">
+      <ion-label>
+        <h2>{{registro.data}}, {{registro.hora}}</h2>
+        <p>{{registro.assunto}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>boletim</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Boletim</ion-label>
+    </ion-list-header>
+
+    <ion-item *ngFor="let registro of boletim">
+      <ion-label>{{registro.disciplina}}</ion-label>
+      <ion-label slot="end">{{registro.nota}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

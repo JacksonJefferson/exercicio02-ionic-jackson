@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  usuario;
+  usuario : {nome: string};
 
   constructor() {
     this.usuario = {
-      'nome':'Jubileu'   
+      nome:'Jubileu'  
     };
   }
 

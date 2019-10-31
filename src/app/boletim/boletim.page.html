@@ -6,6 +6,19 @@
 </ion-header>
 
 <ion-content fullscreen>
+
+  <ion-item>
+    <ion-label position="stacked" >Disciplina<ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input required type="text" [(ngModel)]="nova_nota.disciplina"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked" >Nota<ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input required type="number" [(ngModel)]="nova_nota.nota"></ion-input>
+  </ion-item>
+  <ion-button (click)="adicionar()">ok</ion-button>
+
   <ion-list>
     <ion-list-header>
       <ion-label>Boletim</ion-label>
@@ -14,11 +27,11 @@
     <ion-item *ngFor="let registro of boletim">
       <ion-label>{{registro.disciplina}}</ion-label>
       <ion-label slot="end">{{registro.nota}}</ion-label>
+      <ion-icon slot="end" name="trash" (click)="remover(registro)"></ion-icon>
     </ion-item>
     <ion-item>
       <ion-label>Media</ion-label>
       <ion-label>{{media}}</ion-label>
     </ion-item>
   </ion-list>
-
 </ion-content>

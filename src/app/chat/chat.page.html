@@ -6,6 +6,11 @@
 </ion-header>
 
 <ion-content>
+  <ion-input placeholder="Contato" [(ngModel)]="nova_conversa.contato"></ion-input>
+  <ion-input placeholder="Assunto" [(ngModel)]="nova_conversa.assunto"></ion-input>
+  <ion-input placeholder="Imagem" [(ngModel)]="nova_conversa.img"></ion-input>
+  <ion-button (click)="adicionar()">ok</ion-button>
+
   <ion-list>
     <ion-list-header>Conversas</ion-list-header>
     <ion-item *ngFor="let registro of conversas">

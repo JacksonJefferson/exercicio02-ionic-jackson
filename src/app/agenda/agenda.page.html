@@ -15,6 +15,7 @@
         <h2>{{registro.data}}, {{registro.hora}}</h2>
         <p>{{registro.assunto}}</p>
       </ion-label>
+      <ion-icon slot="end" name="trash" (click)="remover(registro)"></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>
